@@ -7,12 +7,19 @@
   "dependencies": {
     "@cap-js/postgres": "^2.3.0",
     "@sap/cds": "^9.9.1",
-    "pg": "^8.21.0"
+    "pg": "^8.21.0",
+    "@sap-cloud-sdk/connectivity": "^4",
+    "@sap-cloud-sdk/http-client": "^4",
+    "@sap-cloud-sdk/resilience": "^4"
   },
   "cds": {
     "requires": {
       "db": {
         "kind": "postgres"
+      },
+      "b1": {
+        "kind": "odata",
+        "model": "srv/external/b1"
       }
     }
   },
