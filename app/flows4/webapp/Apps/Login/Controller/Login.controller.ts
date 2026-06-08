@@ -8,4 +8,8 @@ export default class Login extends Controller {
     public onInit(): void {
 
     }
+
+    public onEntrar(): void {
+
+    }
 }
