@@ -1,7 +1,7 @@
 {
   "_version": "1.84.0",
   "sap.app": {
-    "id": "flow4",
+    "id": "flows4",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,15 +13,15 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
       "version": "1.24.0",
-      "toolsId": "c0f6fce2-aa14-4d78-af0f-d3e62aca9ddf"
+      "toolsId": "a4ec79dc-5b33-4bc9-a80d-0241eeea49a9"
     },
     "dataSources": {
       "mainService": {
-        "uri": "/odata/v2/flows4/",
+        "uri": "/flows4/",
         "type": "OData",
         "settings": {
           "annotations": [],
-          "odataVersion": "2.0"
+          "odataVersion": "4.01"
         }
       }
     }
@@ -59,15 +59,16 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "flow4.i18n.i18n"
+          "bundleName": "flows4.i18n.i18n"
         }
       },
       "": {
-        "type": "sap.ui.model.odata.v2.ODataModel",
         "dataSource": "mainService",
         "preload": true,
         "settings": {
-          "operationMode": "Server"
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
         }
       }
     },
@@ -86,9 +87,9 @@
         "transition": "slide",
         "type": "View",
         "viewType": "XML",
-        "path": "flow4.Apps",
+        "path": "flows4.view",
         "async": true,
-        "viewPath": "flow4.Apps"
+        "viewPath": "flows4.view"
       },
       "routes": [
         {
@@ -102,12 +103,12 @@
       "targets": {
         "TargetLogin": {
           "id": "Login",
-          "name": "Login.View.Login"
+          "name": "Login"
         }
       }
     },
     "rootView": {
-      "viewName": "flow4.Apps.App.View.App",
+      "viewName": "flows4.view.App",
       "type": "XML",
       "id": "App",
       "async": true

@@ -1,11 +1,11 @@
 {
   "generationParameters": {
-    "generationDate": "Mon Jun 08 2026 13:39:51 GMT-0300 (Brasilia Standard Time)",
+    "generationDate": "Mon Jun 08 2026 16:59:25 GMT-0300 (Brasilia Standard Time)",
     "generatorPlatform": "Visual Studio Code",
     "serviceType": "Local CAP",
     "metadataFilename": "",
     "serviceUrl": "http://localhost:4004/flows4/",
-    "appName": "flow4",
+    "appName": "flows4",
     "appTitle": "Flows 4",
     "appDescription": "Flows 4",
     "appNamespace": "",
@@ -18,6 +18,6 @@
     "template": "Basic V4",
     "generatorName": "SAP Fiori Application Generator",
     "entityRelatedConfig": [],
-    "launchText": "To launch the generated app, start your CAP project:  and navigate to the following location in your browser:\n\nhttp://localhost:4004/flow4/index.html"
+    "launchText": "To launch the generated app, start your CAP project:  and navigate to the following location in your browser:\n\nhttp://localhost:4004/flows4/index.html"
   }
 }

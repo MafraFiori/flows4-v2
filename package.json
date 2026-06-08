@@ -31,9 +31,13 @@
   "devDependencies": {
     "@cap-js/cds-types": "^0.17.0",
     "@sap/cds-dk": "^9.9.2",
-    "cds-plugin-ui5": "^0.17.3"
+    "cds-plugin-ui5": "^0.17.3",
+    "tsx": "^4.22.4"
   },
   "scripts": {
-    "watch-flow4": "cds watch --open flow4/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch": "node --import tsx ./node_modules/@sap/cds-dk/bin/cds.js watch",
+    "start": "node --import tsx ./node_modules/@sap/cds-dk/bin/cds.js serve",
+    "watch-flow4": "node --import tsx ./node_modules/@sap/cds-dk/bin/cds.js watch --open flow4/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-flows4": "cds watch --open flows4/index.html?sap-ui-xx-viewCache=false --livereload false"
   }
 }

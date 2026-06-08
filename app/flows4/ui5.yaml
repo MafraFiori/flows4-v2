@@ -2,7 +2,7 @@
 
 specVersion: "4.0"
 metadata:
-  name: flow4
+  name: flows4
 type: application
 server:
   customMiddleware:
