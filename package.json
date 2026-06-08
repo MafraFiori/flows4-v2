@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "start": "cds watch",
+    "deploy:pg": "cds deploy --to postgres"
+  },
+  "dependencies": {
+    "@cap-js/postgres": "^2.3.0",
+    "@sap/cds": "^9.9.1",
+    "pg": "^8.21.0"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "postgres"
+      }
+    }
+  }
+}
