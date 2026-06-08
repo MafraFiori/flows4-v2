@@ -1,0 +1,39 @@
+{
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "postgres",
+        "pool": {
+          "min": 0,
+          "max": 10,
+          "acquireTimeoutMillis": 15000,
+          "destroyTimeoutMillis": 5000
+        }
+      },
+      "b1": {
+        "kind": "odata",
+        "model": "srv/external/b1"
+      }
+    }
+  },
+  "dependencies": {
+    "@cap-js-community/odata-v2-adapter": "^1.15.12",
+    "@cap-js/postgres": "^2.3.0",
+    "@cap-js/sqlite": "^2.4.0",
+    "@sap-cloud-sdk/connectivity": "^4",
+    "@sap-cloud-sdk/http-client": "^4",
+    "@sap-cloud-sdk/resilience": "^4",
+    "@sap/cds": "^9.9.1"
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "devDependencies": {
+    "@cap-js/cds-types": "^0.17.0",
+    "@sap/cds-dk": "^9.9.2",
+    "cds-plugin-ui5": "^0.17.3"
+  },
+  "scripts": {
+    "watch-flow4": "cds watch --open flow4/index.html?sap-ui-xx-viewCache=false --livereload false"
+  }
+}
