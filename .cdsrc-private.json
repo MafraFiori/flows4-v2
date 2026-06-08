@@ -1,0 +1,15 @@
+{
+  "requires": {
+    "db": {
+      "credentials": {
+        "host": "ep-nameless-thunder-acnn32q4.sa-east-1.aws.neon.tech",
+        "port": 5432,
+        "database": "neondb",
+        "schema": "public",
+        "user": "neondb_owner",
+        "password": "npg_GhFZ47AtWKIU",
+        "ssl": true
+      }
+    }
+  }
+}

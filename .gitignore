@@ -3,7 +3,6 @@ target/
 _out/
 gen/
 
-.cdsrc-private.json
 default-*.json
 *.sqlite
 
@@ -14,7 +13,6 @@ mta_archives/
 
 # Other
 .DS_Store
-.env
 
 # @cap-js/cds-typer
 @cds-models
