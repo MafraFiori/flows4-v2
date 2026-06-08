@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "cds watch",
-    "deploy:pg": "cds deploy --to postgres"
+    "deploy:pg": "cds deploy --to postgres",
+    "watch-flows4": "cds watch --open flows4/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "dependencies": {
     "@cap-js/postgres": "^2.3.0",
@@ -14,5 +15,11 @@
         "kind": "postgres"
       }
     }
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "devDependencies": {
+    "cds-plugin-ui5": "^0.13.0"
   }
 }

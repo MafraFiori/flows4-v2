@@ -1,0 +1,61 @@
+<mvc:View controllerName="flows4.Apps.Login.Controller.Login" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" width="100%">
+      <Page id="loginPage" showHeader="false" enableScrolling="false" class="backGround figLoginPage">
+        <content>
+            <VBox class="figLoginContainer">
+                <HBox id="vBox1" class="figLoginStage" justifyContent="Center" alignItems="Stretch" fitContainer="true">
+                    <VBox id="vBox2" class="figVisualPane" justifyContent="Center" alignItems="Center">
+                        <VBox class="figVisualOverlay">
+                            <Image src="Imagens/layers.png" class="figVisualLogo" decorative="false"/>
+                        </VBox>
+                    </VBox>
+
+                    <VBox id="vBox3" class="figFormPane" justifyContent="Center">
+                        <VBox id="vBox4" class="figFormCard">
+                            <Title id="title2" text="Login" class="figFormTitle" level="H2"/>
+                            <Text text="Acesse com seu usuário para continuar no portal." class="figFormSubtitle"/>
+
+                            <VBox id="vBox6" class="figFormFields">
+                                <Text text="Empresa" class="figInputLabel"/>
+                                <ComboBox
+                                    id="dbo"
+                                    placeholder="Empresa"
+                                    items="{/Empresas}"
+                                    width="100%"
+                                    class="figInput"
+                                    change="onChangeLogicalTransaction">
+                                    <core:Item key="{id}" text="{name}">
+                                        <core:customData>
+                                            <core:CustomData key="url" value="{url}"/>
+                                            <core:CustomData key="db" value="{db}"/>
+                                        </core:customData>
+                                    </core:Item>
+                                </ComboBox>
+                                <Text text="Login" class="figInputLabel"/>
+                                <Input id="Usuario" placeholder="Usuário" width="100%" class="figInput"/>
+                                <Input id="Senha" placeholder="Senha" width="100%" class="figInput" type="Password" submit="onEntra"/>
+                            </VBox>
+
+                            <VBox id="vBox8" class="figActions">
+                                <Button id="ok" text="Entrar" type="Emphasized" class="figPrimaryButton" width="100%" press="onEntra"/>
+                            </VBox>
+                        </VBox>
+                    </VBox>
+
+                    <VBox id="vBox9" class="figLoadingPane" visible="false" justifyContent="Center" alignItems="Center">
+                        <BusyIndicator id="loadingIndicator" class="figBusy" size="3rem"/>
+                        <Text text="Validando acesso..." class="figLoadingText"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+        </content>
+        <footer>
+            <Toolbar design="Transparent" class="figFooterToolbar">
+                <ToolbarSpacer/>
+                <Text text="© 2026 FLOWS 4. Todos os direitos reservados." class="devFor"/>
+                <ToolbarSpacer/>
+                <Text text="🇧🇷  🇪🇸  🇺🇸" class="figFlags"/>
+                <Text id="idVersao" text="20240924 - V1" class="figVersionHidden"/>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>     
